@@ -14,17 +14,17 @@ function addItem(a) {
         console.log("Hello");
         editItem.target.parentNode.childNodes[0].data = document.getElementById("item").value;
         submit.value = "Submit";
-        document.getElementById("item").value = ""; // cia bus pridedamas elementas
+        document.getElementById("item").value = "";
 
-        document.getElementById("lblsuccess").style.display = "block";  // Kai paspaustas
-                                                            //bus mygtukas, stilius pasikeis i block
+        document.getElementById("lblsuccess").style.display = "block";
+
         setTimeout(function(){
             document.getElementById('lblsuccess').style.display = "none";
         }, 3000);
         return false;
     }
     let newItem = document.getElementById("item").value;
-    if(newItem.trim() == "" || newItem.trim() == null)  // || zenklas reiskia arba
+    if(newItem.trim() == "" || newItem.trim() == null)
         return false;
     else
         document.getElementById("item").value == "";
